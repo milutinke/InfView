@@ -1,0 +1,17 @@
+{
+  "name": "MetaMetaSchemeGenerator",
+  "version": "1.0.0",
+  "description": "Generate Meta Meta Scheme from Meta Scheme",
+  "main": "generate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen": "npm install && node generate.js"
+  },
+  "keywords": [],
+  "author": "Dusan Milutinovic",
+  "license": "ISC",
+  "dependencies": {
+    "json-schema-generator": "^2.0.6",
+    "node-cmd": "^3.0.0"
+  }
+}

@@ -1,0 +1,1015 @@
+{
+    "resource": {
+        "name": "Veliki Set Podataka",
+        "location": "./data/database/database/Veliki Set Podataka/",
+        "type": "file-relational",
+
+        "packets": [
+            {
+                "name": "Indeks - sekvencijalne datoteke",
+                "location": "./data/database/Veliki Set Podataka/Indeks - sekvencijalne datoteke/",
+
+                "entities": [
+                    {
+                        "name": "NastavniPredmeti",
+                        "location": "./data/database/Veliki Set Podataka/Indeks - sekvencijalne datoteke/",
+                        "file": "NastavniPredmeti.ind",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PLANA",
+                                "length": 2,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "SIFRA_PREDMETA",
+                                "length": 5,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "NAZIV_PREDMETA",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "TRAJE_SEMESTARA",
+                                "length": 2,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "BROJ_KREDITA",
+                                "length": 3,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "PlanStudijskogPrograma",
+                        "location": "./data/database/Veliki Set Podataka/Indeks - sekvencijalne datoteke/",
+                        "file": "PlanStudijskogPrograma.ind",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PROGRAMA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PLANA",
+                                "length": 2,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "SIFRA_PREDMETA",
+                                "length": 5,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "GODINA_PREDMETA",
+                                "length": 1,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "SEMESTAR_PREDMETA",
+                                "length": 2,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Studenti",
+                        "location": "./data/database/Veliki Set Podataka/Indeks - sekvencijalne datoteke/",
+                        "file": "Studenti.ind",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "STRUKA",
+                                "length": 1,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "BROJ INDEKSA",
+                                "length": 6,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "PREZIME",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "IME RODITELJA",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "IME",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "POL",
+                                "length": 1,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "JMBG",
+                                "length": 13,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_DATETIME",
+                                "name": "DATUM RODJENJA",
+                                "length": 25,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "ADRESA",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "TELEFON",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "StudijskiProgrami",
+                        "location": "./data/database/Veliki Set Podataka/Indeks - sekvencijalne datoteke/",
+                        "file": "StudijskiProgrami.ind",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PROGRAMA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "NAZIV_KOJI_SE_STICE",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "NAZIV PROGRAMA",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "TokStudija",
+                        "location": "./data/database/Veliki Set Podataka/Indeks - sekvencijalne datoteke/",
+                        "file": "TokStudija.ind",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "STRUKA",
+                                "length": 1,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "BROJ INDEKSA",
+                                "length": 6,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PROGRAMA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "SKOLSKA_GODINA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "GODINA_STUDIJA",
+                                "length": 1,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "UPISUJE_PO_PLANU",
+                                "length": 2,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    }
+                ],
+
+                "relations": [
+                    {
+                        "entity1": "TokStudija",
+                        "entity2": "Studenti",
+                        "foreign_key_1": "STRUKA",
+                        "foreign_key_2": "STRUKA"
+                    },
+                    {
+                        "entity1": "TokStudija",
+                        "entity2": "StudijskiProgrami",
+                        "foreign_key_1": "OZNAKA_PROGRAMA",
+                        "foreign_key_2": "OZNAKA_PROGRAMA"
+                    },
+                    {
+                        "entity1": "PlanStudijskogPrograma",
+                        "entity2": "StudijskiProgrami",
+                        "foreign_key_1": "OZNAKA_PROGRAMA",
+                        "foreign_key_2": "OZNAKA_PROGRAMA"
+                    },
+                    {
+                        "entity1": "PlanStudijskogPrograma",
+                        "entity2": "NastavniPredmeti",
+                        "foreign_key_1": "SIFRA_PREDMETA",
+                        "foreign_key_2": "SIFRA_PREDMETA"
+                    }
+                ]
+            },
+            {
+                "name": "Sekvencijalne Datoteke",
+                "location": "./data/database/Veliki Set Podataka/Sekvencijalne datoteke/",
+
+                "entities": [
+                    {
+                        "name": "NastavniPredmeti",
+                        "location": "./data/database/Veliki Set Podataka/Sekvencijalne datoteke/",
+                        "file": "NastavniPredmeti.sek",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PLANA",
+                                "length": 2,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "SIFRA_PREDMETA",
+                                "length": 5,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "NAZIV_PREDMETA",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "TRAJE_SEMESTARA",
+                                "length": 2,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "BROJ_KREDITA",
+                                "length": 3,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "PlanStudijskogPrograma",
+                        "location": "./data/database/Veliki Set Podataka/Sekvencijalne datoteke/",
+                        "file": "PlanStudijskogPrograma.sek",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PROGRAMA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PLANA",
+                                "length": 2,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "SIFRA_PREDMETA",
+                                "length": 5,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "GODINA_PREDMETA",
+                                "length": 1,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "SEMESTAR_PREDMETA",
+                                "length": 2,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Studenti",
+                        "location": "./data/database/Veliki Set Podataka/Sekvencijalne datoteke/",
+                        "file": "Studenti.sek",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "STRUKA",
+                                "length": 1,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "BROJ INDEKSA",
+                                "length": 6,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "PREZIME",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "IME RODITELJA",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "IME",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "POL",
+                                "length": 1,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "JMBG",
+                                "length": 13,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_DATETIME",
+                                "name": "DATUM RODJENJA",
+                                "length": 25,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "ADRESA",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "TELEFON",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "StudijskiProgrami",
+                        "location": "./data/database/Veliki Set Podataka/Sekvencijalne datoteke/",
+                        "file": "StudijskiProgrami.sek",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PROGRAMA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "NAZIV_KOJI_SE_STICE",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "NAZIV PROGRAMA",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "TokStudija",
+                        "location": "./data/database/Veliki Set Podataka/Sekvencijalne datoteke/",
+                        "file": "TokStudija.sek",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "STRUKA",
+                                "length": 1,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "BROJ INDEKSA",
+                                "length": 6,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PROGRAMA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "SKOLSKA_GODINA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "GODINA_STUDIJA",
+                                "length": 1,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "UPISUJE_PO_PLANU",
+                                "length": 2,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    }
+                ],
+
+                "relations": [
+                    {
+                        "entity1": "TokStudija",
+                        "entity2": "Studenti",
+                        "foreign_key_1": "STRUKA",
+                        "foreign_key_2": "STRUKA"
+                    },
+                    {
+                        "entity1": "TokStudija",
+                        "entity2": "StudijskiProgrami",
+                        "foreign_key_1": "OZNAKA_PROGRAMA",
+                        "foreign_key_2": "OZNAKA_PROGRAMA"
+                    },
+                    {
+                        "entity1": "PlanStudijskogPrograma",
+                        "entity2": "StudijskiProgrami",
+                        "foreign_key_1": "OZNAKA_PROGRAMA",
+                        "foreign_key_2": "OZNAKA_PROGRAMA"
+                    },
+                    {
+                        "entity1": "PlanStudijskogPrograma",
+                        "entity2": "NastavniPredmeti",
+                        "foreign_key_1": "SIFRA_PREDMETA",
+                        "foreign_key_2": "SIFRA_PREDMETA"
+                    }
+                ]
+            },
+            {
+                "name": "Serijske datoteke",
+                "location": "./data/database/Veliki Set Podataka/Serijske datoteke/",
+
+                "entities": [
+                    {
+                        "name": "NastavniPredmeti",
+                        "location": "./data/database/Veliki Set Podataka/Serijske datoteke/",
+                        "file": "NastavniPredmeti.ser",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PLANA",
+                                "length": 2,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "SIFRA_PREDMETA",
+                                "length": 5,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "NAZIV_PREDMETA",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "TRAJE_SEMESTARA",
+                                "length": 2,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "BROJ_KREDITA",
+                                "length": 3,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "PlanStudijskogPrograma",
+                        "location": "./data/database/Veliki Set Podataka/Serijske datoteke/",
+                        "file": "PlanStudijskogPrograma.ser",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PROGRAMA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PLANA",
+                                "length": 2,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "SIFRA_PREDMETA",
+                                "length": 5,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "GODINA_PREDMETA",
+                                "length": 1,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "SEMESTAR_PREDMETA",
+                                "length": 2,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Studenti",
+                        "location": "./data/database/Veliki Set Podataka/Serijske datoteke/",
+                        "file": "Studenti.ser",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "STRUKA",
+                                "length": 1,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "BROJ INDEKSA",
+                                "length": 6,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "PREZIME",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "IME RODITELJA",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "IME",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "POL",
+                                "length": 1,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "JMBG",
+                                "length": 13,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_DATETIME",
+                                "name": "DATUM RODJENJA",
+                                "length": 25,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "ADRESA",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "TELEFON",
+                                "length": 20,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "StudijskiProgrami",
+                        "location": "./data/database/Veliki Set Podataka/Serijske datoteke/",
+                        "file": "StudijskiProgrami.ser",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PROGRAMA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "NAZIV_KOJI_SE_STICE",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "NAZIV PROGRAMA",
+                                "length": 80,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "TokStudija",
+                        "location": "./data/database/Veliki Set Podataka/Serijske datoteke/",
+                        "file": "TokStudija.ser",
+
+                        "attributes": [
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "STRUKA",
+                                "length": 1,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_VARCHAR",
+                                "name": "BROJ INDEKSA",
+                                "length": 6,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "OZNAKA_PROGRAMA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "SKOLSKA_GODINA",
+                                "length": 4,
+                                "isPrimaryKey": true,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_NUMERIC",
+                                "name": "GODINA_STUDIJA",
+                                "length": 1,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            },
+                            {
+                                "isForeignKey": false,
+                                "defaultValue": null,
+                                "dataType": "TYPE_CHAR",
+                                "name": "UPISUJE_PO_PLANU",
+                                "length": 2,
+                                "isPrimaryKey": false,
+                                "isMandatory": true
+                            }
+                        ]
+                    }
+                ],
+
+                "relations": [
+                    {
+                        "entity1": "TokStudija",
+                        "entity2": "Studenti",
+                        "foreign_key_1": "STRUKA",
+                        "foreign_key_2": "STRUKA"
+                    },
+                    {
+                        "entity1": "TokStudija",
+                        "entity2": "StudijskiProgrami",
+                        "foreign_key_1": "OZNAKA_PROGRAMA",
+                        "foreign_key_2": "OZNAKA_PROGRAMA"
+                    },
+                    {
+                        "entity1": "PlanStudijskogPrograma",
+                        "entity2": "StudijskiProgrami",
+                        "foreign_key_1": "OZNAKA_PROGRAMA",
+                        "foreign_key_2": "OZNAKA_PROGRAMA"
+                    },
+                    {
+                        "entity1": "PlanStudijskogPrograma",
+                        "entity2": "NastavniPredmeti",
+                        "foreign_key_1": "SIFRA_PREDMETA",
+                        "foreign_key_2": "SIFRA_PREDMETA"
+                    }
+                ]
+            }
+        ]
+    }
+}

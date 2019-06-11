@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "resource": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "location": {},
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sql_jdbc_driver_class": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sql_jdbc_driver_subprotocol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sql_jdbc_driver_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sql_host": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sql_database": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sql_username": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sql_password": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sql_port": {
+          "type": "number"
+        },
+        "packets": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "location": {},
+              "file": {},
+              "entities": {
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "items": {
+                  "required": [
+                    "name"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "location": {},
+                    "file": {},
+                    "attributes": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "required": [
+                          "name",
+                          "dataType",
+                          "length",
+                          "isPrimaryKey",
+                          "isMandatory",
+                          "isForeignKey",
+                          "defaultValue"
+                        ],
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "dataType": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "length": {
+                            "type": ["integer", "null"]
+                          },
+                          "isPrimaryKey": {
+                            "type": "boolean"
+                          },
+                          "isMandatory": {
+                            "type": "boolean"
+                          },
+                          "isForeignKey": {
+                            "type": "boolean"
+                          },
+                          "defaultValue": {
+                            "type": ["integer", "string", "null", "object", "array", "boolean"]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "relations": {
+                "type": "array",
+                "uniqueItems": false,
+                "minItems": 0,
+                "items": {
+                  "required": [
+                    "entity1",
+                    "entity2",
+                    "foreign_key_1",
+                    "foreign_key_2"
+                  ],
+                  "properties": {
+                    "entity1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "entity2": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "foreign_key_1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "foreign_key_2": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "sql_jdbc_driver_class",
+        "sql_jdbc_driver_subprotocol",
+        "sql_jdbc_driver_name",
+        "sql_host",
+        "sql_database",
+        "sql_username",
+        "sql_password",
+        "sql_port",
+        "packets"
+      ]
+    }
+  },
+  "required": [
+    "resource"
+  ]
+}

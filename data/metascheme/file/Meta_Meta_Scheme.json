@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "resource": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "packets": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "required": [
+              "name",
+              "location"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "location": {
+                "type": "string",
+                "minLength": 1
+              },
+              "entities": {
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "items": {
+                  "required": [
+                    "name",
+                    "location",
+                    "file"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "location": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "file": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "attributes": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "required": [
+                          "isForeignKey",
+                          "dataType",
+                          "name",
+                          "length",
+                          "isPrimaryKey",
+                          "isMandatory"
+                        ],
+                        "properties": {
+                          "isForeignKey": {
+                            "type": "boolean"
+                          },
+                          "defaultValue": {},
+                          "dataType": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "name": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "length": {
+                            "type": "number"
+                          },
+                          "isPrimaryKey": {
+                            "type": "boolean"
+                          },
+                          "isMandatory": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "relations": {
+                "type": "array",
+                "uniqueItems": true,
+                "minItems": 1,
+                "items": {
+                  "required": [
+                    "entity1",
+                    "entity2",
+                    "foreign_key_1",
+                    "foreign_key_2"
+                  ],
+                  "properties": {
+                    "entity1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "entity2": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "foreign_key_1": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "foreign_key_2": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "name",
+        "location",
+        "type",
+        "packets"
+      ]
+    }
+  },
+  "required": [
+    "resource"
+  ]
+}

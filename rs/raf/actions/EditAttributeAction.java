@@ -1,0 +1,37 @@
+package rs.raf.actions;
+
+import java.awt.event.ActionEvent;
+
+import rs.raf.model.Attribute;
+import rs.raf.model.Entities;
+import rs.raf.model.Entity;
+import rs.raf.model.InfViewNode;
+import rs.raf.model.Packet;
+import rs.raf.settings.Settings;
+import rs.raf.utilities.AcceleratorHelper;
+import rs.raf.utilities.NodeHelper;
+import rs.raf.view.frames.EditAttributeView;
+import rs.raf.view.frames.EditorFrame;
+
+@SuppressWarnings("serial")
+public class EditAttributeAction extends InfViewAbstractAction {
+	public EditAttributeAction() {
+		putValue(ACCELERATOR_KEY, AcceleratorHelper.getFormatedAccelerator('u'));
+		putValue(SMALL_ICON, getIcon(Settings.ICON_NEW));
+		putValue(NAME, "Edit atribute");
+		putValue(SHORT_DESCRIPTION, "Edit atribute");
+	}
+
+	public void actionPerformed(ActionEvent arg0) {
+		String nameofAttribute = EditorFrame.getListOfattributes().getSelectedItem().toString();
+
+		Packet packet = EditorFrame.getClone();
+		InfViewNode entities = NodeHelper.findNode(packet, Entities.class, "Entities");
+		String nameofEntity = EditorFrame.getListOfentities().getSelectedItem().toString();
+
+		InfViewNode entity = NodeHelper.findNode(entities, Entity.class, nameofEntity);
+		InfViewNode attribute = NodeHelper.findNode(entity, Attribute.class, nameofAttribute);
+
+		new EditAttributeView((Attribute) attribute);
+	}
+}
