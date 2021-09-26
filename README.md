@@ -17,5 +17,15 @@ The project was written in Java using:
   - MVC
   - Singleton
 
+The project was done by usage of Agile Methodoliges and usage of UML:
+  - Gathering information from the potential "customers" through interviews
+  - Concept vision and usability study including mockups
+  - Use case diagram
+  - Action diagram
+  - State diagram
+  - Class diagram
+  - Sprints
+  - Mutli-Stage testing and refurbishment
+
 ## Screenshot
 ![InfView Demo](demo.png)
