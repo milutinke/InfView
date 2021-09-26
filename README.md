@@ -1,8 +1,8 @@
 # InfView
 
 ## About
-InfView is a student project from the Software Design Course on 2nd year on Racunarski Fakultet, University Union in Belgrade, Serbia.
-The aim of the project was to make a reusable data manipulation software which would support various types of relational databases, including: 
+InfView is a student project from the Software Design Course in 2nd year on Racunarski Fakultet, University Union in Belgrade, Serbia.
+The aim of the project was to make a reusable data manipulation software that would support various types of relational databases, including: 
 - Sequential
 - Indexed Sequential
 - SQL
